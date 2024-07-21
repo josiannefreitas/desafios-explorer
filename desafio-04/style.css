@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --hue: 195;
+  --color-base-white: hsl(0, 0%, 100%);
+  --color-base-blue-200: hsl(196, 100%, 98%);
+  --color-base-blue-500: hsl(var(--hue), 46%, 40%);
+  --color-base-blue-700: hsl(var(--hue), 91%, 25%);
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  width: min(38.4rem, 100%);
+  margin: 0 auto;
+}
+
+header,
+footer {
+  background-color: var(--color-base-blue-700);
+  color: var(--color-base-white);
+  padding: 1.6rem 2.4rem;
+}
+
+nav {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: center;
+}
+
+nav img {
+  size: 4rem;
+}
+
+input {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 0.4rem;
+}
+
+input::placeholder {
+  color: var(--color-base-white);
+  padding: 1.2rem 1.4rem;
+  font-family: 'Mulish', sans-serif;
+}
+
+#photo-post {
+  width: 100%;
+}
+
+.title {
+  padding: 3.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.reaction {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.reaction img {
+  size: 4rem;
+}
+
+h2 {
+  margin-top: 3.2rem;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  padding: 3.2rem 0;
+}
+
+.articles h3 {
+  font-size: 1.8rem;
+}
+
+.articles p {
+  font-size: 1.4rem;
+}
+
+figure {
+  display: flex;
+  justify-content: space-between;
+}
+
+figure img {
+  width: 15.2rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+figcaption {
+  flex: 1;
+  width: min(21.6rem);
+}
+
+footer>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
