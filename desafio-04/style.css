@@ -14,11 +14,13 @@
   --color-base-blue-200: hsl(196, 100%, 98%);
   --color-base-blue-500: hsl(var(--hue), 46%, 40%);
   --color-base-blue-700: hsl(var(--hue), 91%, 25%);
+  --color-black: hsl(240, 6%, 13%);
 }
 
-body {
+html {
   font-family: 'Mulish', sans-serif;
   font-size: 1.6rem;
+  color: var(--color-black);
 }
 
 .container {
@@ -30,6 +32,7 @@ header,
 footer {
   background-color: var(--color-base-blue-700);
   color: var(--color-base-white);
+  display: flex;
   padding: 1.6rem 2.4rem;
 }
 
@@ -75,10 +78,21 @@ input::placeholder {
 
 .reaction img {
   size: 4rem;
+  transition: all 300ms;
+}
+
+.reaction img:hover,
+.reaction img:focus {
+  transform: scale(1.1);
+}
+
+main p {
+  font-size: 1.6rem;
 }
 
 h2 {
   margin-top: 3.2rem;
+  font-size: 2rem;
 }
 
 .articles {
@@ -97,24 +111,87 @@ h2 {
 }
 
 figure {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 15.2rem 1fr;
+  gap: 0.4rem;
 }
 
 figure img {
-  width: 15.2rem;
+  width: 100%;
   aspect-ratio: 16/9;
-  object-fit: cover;
-  display: block;
+  border-radius: 0.4rem;
 }
 
 figcaption {
   flex: 1;
   width: min(21.6rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-footer>div {
+footer {
+  font-size: 1.6rem;
+}
+
+footer > div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (width > 80rem) {
+  #app {
+    display: grid;
+    grid-template-areas:
+      'header header'
+      'main sidebar'
+      'footer footer';
+    gap: 3.6rem;
+  }
+
+  .container {
+    width: initial;
+  }
+
+  header {
+    grid-area: header;
+    /* width: 100vw; */
+    justify-content: center;
+  }
+
+  nav.container {
+    width: 121.6rem;
+  }
+
+  input {
+    flex: 1;
+  }
+
+  main {
+    grid-area: main;
+    max-width: 80rem;
+    margin-left: auto;
+  }
+
+  .title {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  sidebar {
+    grid-area: sidebar;
+    max-width: 38.4rem;
+    margin-right: auto;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  footer {
+    grid-area: footer;
+  }
 }
