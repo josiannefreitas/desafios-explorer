@@ -114,6 +114,12 @@ figure {
   display: grid;
   grid-template-columns: 15.2rem 1fr;
   gap: 0.4rem;
+
+  transition: all 300ms;
+}
+
+figure:hover, figure:focus {
+  scale: 1.1;
 }
 
 figure img {
@@ -193,5 +199,28 @@ footer > div {
 
   footer {
     grid-area: footer;
+  }
+}
+
+/* Animation */
+header {
+  animation: fromTop 600ms;
+}
+
+main, sidebar {
+  animation: fromBottom 800ms 100ms backwards;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
   }
 }
