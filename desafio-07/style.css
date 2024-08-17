@@ -3,6 +3,12 @@
   --color-purple: hsla(244, 38%, 28%, 1);
   --color-pink: hsla(320, 69%, 42%, 1);
   --color-white: hsla(0, 0%, 100%, 1);
+
+  --color-gradient: linear-gradient(
+    96deg,
+    var(--color-blue) 0%,
+    var(--color-purple) 99.68%
+  );
 }
 
 * {
@@ -69,11 +75,7 @@ main img {
 }
 
 aside {
-  background: linear-gradient(
-    96deg,
-    var(--color-blue) 0%,
-    var(--color-purple) 99.68%
-  );
+  background: var(--color-gradient);
 }
 
 .cards {
@@ -115,6 +117,10 @@ aside {
   padding: 5rem 0;
 }
 
+.stars {
+  display: none;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -138,13 +144,14 @@ label img {
 input {
   display: flex;
   align-items: center;
-  
+
   appearance: none;
   border: none;
   outline: none;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--color-purple);
   /* font-size: 1rem; */
   font-weight: 600;
@@ -158,11 +165,7 @@ input::placeholder, textarea::placeholder {
 }
 
 button {
-  background: linear-gradient(
-    96deg,
-    var(--color-blue) 0%,
-    var(--color-purple) 99.68%
-  );
+  background: var(--color-gradient);
   color: var(--color-white);
 
   border-radius: 1rem;
@@ -190,4 +193,96 @@ footer > p {
   color: var(--color-white);
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+@media (width > 60rem) {
+  .container {
+    margin: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+  }
+
+  #space {
+    width: 45rem;
+    margin: 0 1.5rem 6.5rem 0;
+  }
+
+  .introduction {
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+  }
+
+  div > img {
+    margin: 11rem 0 8.5rem 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  h3, h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: left;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  aside {
+    padding: 4rem 7rem;
+  }
+
+  .cards {
+    flex-direction: row;
+    gap: 3.75rem;
+    padding: 3rem 0;
+  }
+
+  .card {
+    border-radius: 1.5rem;
+    padding: 2rem;
+    gap: 2.5rem;
+
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .card > div {
+    gap: 1.5rem;
+  }
+
+  .planet {
+    margin: 0;
+  }
+
+  .contacts {
+    gap: 2.5rem; 
+    padding: 6rem 7rem;
+    flex: 1;
+  }
+
+  .stars, .stars>img {
+    display: flex;
+    margin: 0;
+    justify-content: last baseline;
+    width: 40rem;
+  }
+
+  .input-wrapper, button {
+    border-radius: 1.5rem;
+  }
 }

@@ -25,7 +25,7 @@
         />
       </div>
 
-      <div>
+      <div class="introduction">
         <h1>Explore sem limites</h1>
         <h4>Porque o aprendizado é contínuo</h4>
 
@@ -83,35 +83,41 @@
       </div>
     </aside>
 
-    <section class="container contacts">
-      <h2>Entre em contato</h2>
+    <section class="container">
+      <div class="contacts">
+        <h2>Entre em contato</h2>
+  
+        <form>
+          <div class="input-wrapper">
+            <label for="input" class="icon">
+              <img src="./assets/person.svg" alt="Íncone de pessoa">
+            </label>
+            <input type="text" name="name" id="name" placeholder="Seu nome" />
+          </div>
+  
+          <div class="input-wrapper">
+            <label for="input" class="icon">
+              <img src="./assets/at.svg" alt="Ícone de @">
+            </label>
+            <input type="email" name="email" id="email" placeholder="E-mail" />
+          </div>
+  
+          <div class="input-wrapper message-input">
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Digite sua mensagem aqui..."
+            ></textarea>
+          </div>
+  
+          <button type="submit">Enviar mensagem</button>
+        </form>
+      </div>
 
-      <form>
-        <div class="input-wrapper">
-          <label for="input" class="icon">
-            <img src="./assets/person.svg" alt="Íncone de pessoa">
-          </label>
-          <input type="text" name="name" id="name" placeholder="Seu nome" />
-        </div>
-
-        <div class="input-wrapper">
-          <label for="input" class="icon">
-            <img src="./assets/at.svg" alt="Ícone de @">
-          </label>
-          <input type="email" name="email" id="email" placeholder="E-mail" />
-        </div>
-
-        <div class="input-wrapper message-input">
-          <textarea
-            type="text"
-            name="message"
-            id="message"
-            placeholder="Digite sua mensagem aqui..."
-          ></textarea>
-        </div>
-
-        <button type="submit">Enviar mensagem</button>
-      </form>
+      <div class="stars">
+        <img src="./assets/dots.png" alt="Ilustração de várias estrelas de quatro pontas aumentando de tamanho">
+      </div>
     </section>
 
     <footer>
